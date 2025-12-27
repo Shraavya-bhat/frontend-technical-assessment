@@ -86,14 +86,21 @@ Authentication is handled on the client side for demonstration purposes
 
 Focus of this project is frontend architecture, UI, routing, and state management
 
-Screenshots
+## Screenshots
 
-## Login Page
+## 📸 Screenshots
 
-Dashboard Page
+### Home Page
+![Home Page](./screenshots/home.png)
 
-Users List Page
+### Login Page
+![Login Page](./screenshots/login.png)
 
-(Screenshots included in submission)
+### Dashboard
+![Dashboard](./screenshots/dashboard.png)
+
+### Users List
+![Users List](./screenshots/users.png)
+
 
 ## Thankyou.
