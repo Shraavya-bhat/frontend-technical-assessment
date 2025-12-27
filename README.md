@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Technical Assessment
 
-## Getting Started
+This project is a frontend technical assessment built using **Next.js (App Router)**, **Material UI (MUI)**, and **Zustand** for state management.
 
-First, run the development server:
+---
 
-```bash
+## 🚀 Tech Stack
+
+- Next.js (App Router)
+- React
+- Material UI (MUI)
+- Zustand (State Management)
+- DummyJSON API
+
+---
+
+## 🔐 Authentication
+
+- Admin login implemented using DummyJSON authentication API
+- Zustand is used to manage authentication state
+- Protected Dashboard route
+- Logout functionality implemented
+
+**Test Credentials:**
+```txt
+Username: kminchelle
+Password: 0lelplR
+
+Note: DummyJSON API can be inconsistent during development.
+A frontend fallback mechanism is used to ensure smooth demo functionality.
+
+📊 Features
+
+Home page with navigation to Login
+
+Admin Login page
+
+Protected Dashboard page
+
+Users List page with API integration
+
+Clean and responsive UI using Material UI
+
+Client-side routing using Next.js App Router
+
+👥 Users List
+
+Data fetched from: https://dummyjson.com/users
+
+Displayed using Material UI Table
+
+Columns shown:
+
+User ID
+
+Full Name
+
+Email
+
+Age
+
+🛠️ How to Run Locally
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Open in browser:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000
 
-## Learn More
+🧭 Routes
 
-To learn more about Next.js, take a look at the following resources:
+/ → Home
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+/login → Admin Login
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+/dashboard → Protected Dashboard
 
-## Deploy on Vercel
+/users → Users List
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📌 Notes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Authentication is handled on the client side for demonstration purposes
+
+The focus of this project is frontend architecture, UI, routing, and state management
+
+📸 Screenshots
+
+Login Page
+
+Dashboard Page
+
+Users List Page
+
+(Screenshots included in submission)
+
+👤 Author
+
+Shraavya K N Bhat
+
+
+
