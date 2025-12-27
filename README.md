@@ -25,30 +25,24 @@ A frontend technical assessment built using **Next.js (App Router)**, **Material
 ```txt
 Username: kminchelle
 Password: 0lelplR
-
+```
 Note: DummyJSON API may be inconsistent during development.
 A frontend fallback mechanism is used to ensure smooth demo functionality.
 
-Features
+## Features
 
-Home page with navigation to login
+-Home page with navigation to login
+-Admin login page
+-Protected dashboard
+-Users list page with API integration
+-Clean and responsive UI using Material UI
+-Client-side routing using Next.js App Router
 
-Admin login page
-
-Protected dashboard
-
-Users list page with API integration
-
-Clean and responsive UI using Material UI
-
-Client-side routing using Next.js App Router
-
-Users List
-
+## Users List
+```txt
 Data fetched from: https://dummyjson.com/users
-
 Displayed using Material UI Table
-
+```
 Columns:
 
 User ID
@@ -59,16 +53,18 @@ Email
 
 Age
 
-How to Run Locally
+## How to Run Locally
+```txt
 npm install
 npm run dev
+```
 
-
-Open in browser:
-
+## Open in browser:
+```txt
 http://localhost:3000
+```
 
-Routes
+## Routes
 
 / – Home
 
@@ -78,7 +74,7 @@ Routes
 
 /users – Users List
 
-Notes
+## Notes
 
 Authentication is handled on the client side for demonstration purposes
 
@@ -86,12 +82,12 @@ Focus of this project is frontend architecture, UI, routing, and state managemen
 
 Screenshots
 
-Login Page
+## Login Page
 
 Dashboard Page
 
 Users List Page
 
 (Screenshots included in submission)
-```
+
 Thankyou.
