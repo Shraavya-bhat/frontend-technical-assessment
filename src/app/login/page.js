@@ -1,86 +1,99 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
+  Box,
   Container,
   TextField,
   Button,
-  Typography,
-  Box,
+  Typography
 } from "@mui/material";
 import { useAuthStore } from "@/store/authStore";
-import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
+  const router = useRouter();
+  const login = useAuthStore((state) => state.login);
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
-  const { token, login, error, loading } = useAuthStore();
-  const router = useRouter();
-
-  // Redirect after login
-  useEffect(() => {
-    if (token) {
-      router.push("/dashboard");
-    }
-  }, [token, router]);
+  const [error, setError] = useState("");
 
   const handleLogin = async () => {
-    if (!username.trim() || !password.trim()) {
-      return; // ❌ no alert, just stop
+    if (!username || !password) {
+      setError("Please enter username and password");
+      return;
     }
 
-    await login(username.trim(), password.trim());
+    try {
+      await login(username, password);
+      router.push("/dashboard");
+    } catch (err) {
+      setError("Invalid credentials");
+    }
   };
 
   return (
-    <Container maxWidth="sm">
-      <Box
-        sx={{
-          mt: 10,
-          p: 4,
-          boxShadow: 3,
-          borderRadius: 2,
-          textAlign: "center",
-        }}
-      >
-        <Typography variant="h5" gutterBottom>
-          Admin Login
-        </Typography>
-
-        <TextField
-          label="Username"
-          fullWidth
-          margin="normal"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-
-        <TextField
-          label="Password"
-          type="password"
-          fullWidth
-          margin="normal"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
-        {error && (
-          <Typography color="error" sx={{ mt: 1 }}>
-            {error}
-          </Typography>
-        )}
-
-        <Button
-          variant="contained"
-          fullWidth
-          sx={{ mt: 3 }}
-          onClick={handleLogin}
-          disabled={loading}
+    <Box
+      sx={{
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "linear-gradient(135deg, #667eea, #764ba2)",
+      }}
+    >
+      <Container maxWidth="sm">
+        <Box
+          sx={{
+            p: 4,
+            backgroundColor: "#fff",
+            borderRadius: 3,
+            boxShadow: 8,
+            textAlign: "center",
+          }}
         >
-          {loading ? "Logging in..." : "Login"}
-        </Button>
-      </Box>
-    </Container>
+          <Typography variant="h5" fontWeight="bold" gutterBottom>
+            Admin Login
+          </Typography>
+
+          <Typography variant="body2" color="text.secondary" mb={3}>
+            Sign in to access the dashboard
+          </Typography>
+
+          <TextField
+            label="Username"
+            fullWidth
+            margin="normal"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+
+          <TextField
+            label="Password"
+            type="password"
+            fullWidth
+            margin="normal"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          {error && (
+            <Typography color="error" mt={1}>
+              {error}
+            </Typography>
+          )}
+
+          <Button
+            variant="contained"
+            fullWidth
+            sx={{ mt: 3, py: 1.2 }}
+            onClick={handleLogin}
+          >
+            Login
+          </Button>
+        </Box>
+      </Container>
+    </Box>
   );
 }
