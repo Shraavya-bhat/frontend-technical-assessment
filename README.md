@@ -1,10 +1,10 @@
 # Frontend Technical Assessment
 
-This project is a frontend technical assessment built using **Next.js (App Router)**, **Material UI (MUI)**, and **Zustand** for state management.
+A frontend technical assessment built using **Next.js (App Router)**, **Material UI (MUI)**, and **Zustand** for state management.
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - Next.js (App Router)
 - React
@@ -14,42 +14,42 @@ This project is a frontend technical assessment built using **Next.js (App Route
 
 ---
 
-## 🔐 Authentication
+## Authentication
 
-- Admin login implemented using DummyJSON authentication API
-- Zustand is used to manage authentication state
-- Protected Dashboard route
-- Logout functionality implemented
+- Admin login implemented using DummyJSON authentication API  
+- Authentication state managed using Zustand  
+- Dashboard route protected  
+- Logout functionality implemented  
 
-**Test Credentials:**
+### Test Credentials
 ```txt
 Username: kminchelle
 Password: 0lelplR
 
-Note: DummyJSON API can be inconsistent during development.
+Note: DummyJSON API may be inconsistent during development.
 A frontend fallback mechanism is used to ensure smooth demo functionality.
 
-📊 Features
+Features
 
-Home page with navigation to Login
+Home page with navigation to login
 
-Admin Login page
+Admin login page
 
-Protected Dashboard page
+Protected dashboard
 
-Users List page with API integration
+Users list page with API integration
 
 Clean and responsive UI using Material UI
 
 Client-side routing using Next.js App Router
 
-👥 Users List
+Users List
 
 Data fetched from: https://dummyjson.com/users
 
 Displayed using Material UI Table
 
-Columns shown:
+Columns:
 
 User ID
 
@@ -59,7 +59,7 @@ Email
 
 Age
 
-🛠️ How to Run Locally
+How to Run Locally
 npm install
 npm run dev
 
@@ -68,23 +68,23 @@ Open in browser:
 
 http://localhost:3000
 
-🧭 Routes
+Routes
 
-/ → Home
+/ – Home
 
-/login → Admin Login
+/login – Admin Login
 
-/dashboard → Protected Dashboard
+/dashboard – Protected Dashboard
 
-/users → Users List
+/users – Users List
 
-📌 Notes
+Notes
 
 Authentication is handled on the client side for demonstration purposes
 
-The focus of this project is frontend architecture, UI, routing, and state management
+Focus of this project is frontend architecture, UI, routing, and state management
 
-📸 Screenshots
+Screenshots
 
 Login Page
 
@@ -93,10 +93,5 @@ Dashboard Page
 Users List Page
 
 (Screenshots included in submission)
-
-👤 Author
-
-Shraavya K N Bhat
-
-
-
+```
+Thankyou.
