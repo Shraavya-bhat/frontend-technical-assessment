@@ -27,15 +27,21 @@ Username: kminchelle
 Password: 0lelplR
 ```
 Note: DummyJSON API may be inconsistent during development.
+
 A frontend fallback mechanism is used to ensure smooth demo functionality.
 
 ## Features
 
 -Home page with navigation to login
+
 -Admin login page
+
 -Protected dashboard
+
 -Users list page with API integration
+
 -Clean and responsive UI using Material UI
+
 -Client-side routing using Next.js App Router
 
 ## Users List
@@ -90,4 +96,4 @@ Users List Page
 
 (Screenshots included in submission)
 
-Thankyou.
+## Thankyou.
